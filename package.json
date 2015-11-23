@@ -1,0 +1,18 @@
+{
+  "name": "angular-node-cron",
+  "version": "1.0.0",
+  "description": "UI Directive for Creating Node-Cron Jobs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Sara Gudeman",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/saragudeman/angular-node-cron.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.8"
+  }
+}
