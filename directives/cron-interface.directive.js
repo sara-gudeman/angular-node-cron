@@ -7,9 +7,12 @@
 
   function cronInterface() {
     return {
-      templateUrl: 'cron-select.html',
+      templateUrl: 'templates/seconds.templates.html',
       controller: 'CronController',
-      restrict: 'E'
+      restrict: 'E',
+      scope: {},
+      transclude: true,
+      link: function(scope, element, attrs, controller, transcludeFn) {}
     }
   }
 })();

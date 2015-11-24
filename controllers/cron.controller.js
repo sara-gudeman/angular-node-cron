@@ -11,6 +11,7 @@
 
     var options = {
       seconds: utilsFactory.range(0, 60),
+      hours: utilsFactory.range(0, 24),
       minutes: utilsFactory.range(0, 60),
       daysOfWeek: utilsFactory.range(0, 7),
       daysOfMonth: utilsFactory.range(1, 32),
@@ -18,32 +19,46 @@
     };
 
     $scope.frequencyInput = {};
+    $scope.frequencyValue;
+    $scope.seconds = utilsFactory.range(0, 60, 5);
 
     // modeled after: https://docs.angularjs.org/api/ng/directive/ngOptions
     $scope.frequencyOptions = [
       {
         id : 1,
-        label : 'Second'
+        label : 'Second',
+        values: options.seconds,
+        notAnOption: false
       },
       {
         id : 2,
-        label : 'Minute'  
+        label : 'Minute',
+        values: options.minutes,
+        notAnOption: false
       },
       {
         id : 3,
-        label : 'Hour'
+        label : 'Hour',
+        values: options.hours,
+        notAnOption: false
       },
       {
         id : 4,
-        label : 'Day of Month'  
+        label : 'Day of Month',
+        values: options.daysOfMonth,
+        notAnOption: false
       },
       {
         id : 5,
-        label : 'Month'  
+        label : 'Month',
+        values: options.months,
+        notAnOption: false
       },
       {
         id : 6,
-        label : 'Day of Week'  
+        label : 'Day of Week',
+        values: options.daysOfWeek,
+        notAnOption: false
       }
     ];
 
