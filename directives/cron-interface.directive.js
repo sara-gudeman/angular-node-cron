@@ -7,7 +7,7 @@
 
   function cronInterface() {
     return {
-      templateUrl: 'seconds-select.html',
+      templateUrl: 'templates/cron.template.html',
       controller: 'CronController',
       restrict: 'E',
       scope: {},
