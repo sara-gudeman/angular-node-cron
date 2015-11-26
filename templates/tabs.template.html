@@ -1,7 +1,3 @@
 <h2>Schedule by:</h2>
 
-<li ng-repeat='frequency in frequencyOptions track by frequency.id'><span ng-click="state.selected = frequency.templateName">{{frequency.label}}</span></li>
-<div>{{state.selected}}</div>
-<ng-include src="getUrl(state.selected)"></ng-include>
-<hr />
-<label>Repeat by: <select ng-model='frequencySelect' ng-options='frequency as frequency.label for frequency in frequencyOptions track by frequency.id'></select></label> {{frequencySelect}}
+<li ng-repeat='frequency in frequencyOptions track by frequency.id'><span ng-click="clickState(frequency.id)">{{frequency.label}}</span></li> {{state.selected}}

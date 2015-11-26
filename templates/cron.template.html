@@ -1,9 +1,17 @@
 <div>
   <ng-include src="'templates/tabs.template.html'"></ng-include><br />
-  <ng-include src="'templates/seconds.template.html'"></ng-include><br />
-  <ng-include src="'templates/minutes.template.html'"></ng-include><br />
-  <ng-include src="'templates/hours.template.html'"></ng-include><br />
-  <ng-include src="'templates/month-days.template.html'"></ng-include><br />
-  <ng-include src="'templates/months.template.html'"></ng-include><br />
-  <ng-include src="'templates/week-days.template.html'"></ng-include><br />
+  Days Of Week
+  <select ng-model='frequencyCreated.daysOfWeek' ng-options='dayOfWeek for dayOfWeek in frequencyRanges.daysOfWeek'></select>
+  Months
+  <!-- TODO functionalize the ng-show state -->
+  <select ng-model='frequencyCreated.months' ng-options='month for month in frequencyRanges.months'></select>
+  Day Of Month
+  <select ng-model='frequencyCreated.dayOfMonth' ng-options='dayOfMonth for dayOfMonth in frequencyRanges.daysOfMonth'></select>
+  Hours
+  <select ng-model='frequencyCreated.hours' ng-options='hour for hour in frequencyRanges.hours'></select>
+  Minutes
+  <select ng-model='frequencyCreated.minutes' ng-options='minute for minute in frequencyRanges.minutes'></select>
+  Seconds
+  <select ng-model='frequencyCreated.seconds' ng-options='second for second in frequencyRanges.seconds'></select>
+  {{frequencyCreated}}
 </div>
