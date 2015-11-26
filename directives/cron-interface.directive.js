@@ -9,7 +9,6 @@
   function cronInterface (cronConfig) {
     return {
       templateUrl: 'templates/cron.template.html',
-      // controller: 'CronController',
       restrict: 'E',
       scope: {},
       link: function(scope, element, attrs) {
@@ -17,14 +16,19 @@
         scope.frequencyRanges = cronConfig.frequencyRanges;
 
         scope.state = {
-          selected: 0
+          selected: scope.frequencyOptions[0]
         };
 
         scope.displayOptions = function(frequency) {
-          return frequency.id <= scope.state.selected && frequency.isOption;
+          if (frequency.isOption) {
+            if (scope.state.selected.id === 6) {
+              return frequency.id <= 3 || frequency.id === 6;
+            } else {
+              return frequency.id <= scope.state.selected.id;
+            }
+          }
         };
 
-        scope.frequencySelect;
         scope.frequencyCreated = {};
       }
     }
