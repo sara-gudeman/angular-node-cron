@@ -11,7 +11,6 @@
       controller: 'CronController',
       restrict: 'E',
       scope: {},
-      transclude: true,
       link: function(scope, element, attrs, controller, transcludeFn) {}
     }
   }

@@ -1,4 +1,7 @@
 li {
   display: inline-block;
-  padding: 4px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background-color: #bbcee9;
+  margin: 2px;
 }
