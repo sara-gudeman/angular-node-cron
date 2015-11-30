@@ -11,18 +11,8 @@
   function cronConfig (utilsFactory) {
     var _configDefault = {};
 
-    this.frequencyRanges = {
-      seconds: utilsFactory.range(0, 60),
-      hours: utilsFactory.range(0, 24),
-      minutes: utilsFactory.range(0, 60),
-      daysOfWeek: utilsFactory.range(0, 7),
-      daysOfMonth: utilsFactory.range(1, 32),
-      months: utilsFactory.range(0, 12)
-    };
-
     // modeled after: https://docs.angularjs.org/api/ng/directive/ngOptions
-
-    this.frequencyOptions = [
+    var frequencyOptions = [
       {
         id : 1,
         label : 'Second',
@@ -60,6 +50,23 @@
         isOption: true
       }
     ];
+
+    this.frequencyOptions = frequencyOptions;
+    
+    this.minFrequencyOption = frequencyOptions.reduce(function(currObj, min) {
+      return Math.min(currObj.id, min);
+    }, 6);
+
+    this.frequencyRanges = {
+      seconds: utilsFactory.range(0, 60),
+      hours: utilsFactory.range(0, 24),
+      minutes: utilsFactory.range(0, 60),
+      daysOfWeek: utilsFactory.range(0, 7),
+      daysOfMonth: utilsFactory.range(1, 32),
+      months: utilsFactory.range(0, 12)
+    };
+
+
   }
 
 })();
