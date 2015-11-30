@@ -2,6 +2,6 @@
   'use strict';
 
   
-  angular.module('cron', []);
+  angular.module('angular-node-cron', []);
   
 })();

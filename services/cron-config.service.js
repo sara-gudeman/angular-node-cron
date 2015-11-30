@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('cron')
+    .module('angular-node-cron')
     .service('cronConfig', cronConfig);
 
   cronConfig.$inject = ['utilsFactory'];

@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('cron')
+    .module('angular-node-cron')
     .factory('utilsFactory', utilsFactory);
 
   function utilsFactory() {
