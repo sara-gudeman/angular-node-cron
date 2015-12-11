@@ -22,13 +22,38 @@
           Every {{frequency.templateName}}
           <select ng-model='frequencyCreated[frequency.templateName]' ng-options='item for item in frequencyRanges[frequency.templateName]'></select>
 
+          <!-- TEMP HACK -->
+          <uib-timepicker ng-model="mytime" show-spinners="false" show-seconds="true" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></uib-timepicker>
+
+          <pre class="alert alert-info">Time is: {{mytime | date:'shortTime' }}</pre>
+
+          <div class="row">
+              <div class="col-xs-6">
+                  Hours step is:
+                <select class="form-control" ng-model="hstep" ng-options="opt for opt in options.hstep"></select>
+              </div>
+              <div class="col-xs-6">
+                  Minutes step is:
+                <select class="form-control" ng-model="mstep" ng-options="opt for opt in options.mstep"></select>
+              </div>
+            </div>
+
+            <hr>
+
+            <button type="button" class="btn btn-info" ng-click="toggleMode()">12H / 24H</button>
+            <button type="button" class="btn btn-default" ng-click="update()">Set to 14:00</button>
+            <button type="button" class="btn btn-danger" ng-click="clear()">Clear</button>
+          <!-- END HACK -->
+
         </uib-tab>
       </uib-tabset>
     </div>
 
     <script src="node_modules/angular/angular.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
-    <script src="node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- // <script src="node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.js"></script> -->
+    <script src="angular-ui-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- // <script src="bootstrap-master/src/timepicker/timepicker.js"></script> -->
     <script src="cron.module.js"></script>
     <script src="utils/utils.factory.js"></script>
     <script src="services/cron.service.js"></script>

@@ -18,7 +18,7 @@
     $scope.selectedFrequency = cronConfig.minFrequencyOption;
     $scope.frequencyCreated = {};
 
-    // TEMP HACK
+    // TEMP HACK FOR TIMEPICKER EXAMPLE
     $scope.mytime = new Date();
     $scope.hstep = 1;
     $scope.mstep = 15;

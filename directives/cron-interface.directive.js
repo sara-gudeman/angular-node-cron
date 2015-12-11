@@ -10,7 +10,13 @@
       templateUrl: 'templates/cron.template.html',
       controller: 'CronController',
       restrict: 'E',
-      scope: {},
+      replace: true,
+      transclude: true,
+      scope: {
+        config : '=',
+        output : '=?',
+        init   : '=?'
+      },
       link: function(scope, element, attrs) {
       }
     }
