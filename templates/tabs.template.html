@@ -1,4 +1,4 @@
 <h2>Schedule by:</h2>
 
-<li ng-repeat='frequency in frequencyOptions track by frequency.id'><span ng-click="state.selected = frequency">{{frequency.label}}</span></li>
-<select ng-model='state.selected' ng-options='frequency as frequency.label for frequency in frequencyOptions track by frequency.id'></select>{{state.selected.id}}
+<li ng-repeat='frequency in frequencyOptions track by frequency.idx'><span ng-click="frequencyCreated.base = frequency.idx">{{frequency.label}}</span></li> 
+<select ng-model='frequencyCreated.base' ng-options='frequency.idx as frequency.label for frequency in frequencyOptions track by frequency.idx'></select>{{frequencyCreated}}

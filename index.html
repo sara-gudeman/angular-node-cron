@@ -3,16 +3,32 @@
   <head>
     <meta charset="UTF-8">
     <title>Node Cron UI</title>
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles/styles.css"> -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body ng-app="angular-node-cron">
     
-    <cron-interface></cron-interface>
+    <!-- notes: 
+    can have CALLBACK FUNCTION stored in SELECT action (as in when a tab is selected); useful for if an action needs to take place after a click
 
-    
-  
+    tabs[tab-index] = true SELECTS the tab at that index; useful for if I need to take an action based on boolean isSelected/notSelected
+
+    disabled can be set to true
+     -->
+
+    <div ng-controller="CronController">
+      <uib-tabset>
+        <uib-tab ng-repeat="frequency in frequencyOptions" heading="{{frequency.label}}" select="frequencyCreated.base = frequency.idx" active="frequency.active" disable="frequency.disabled">
+          Every {{frequency.templateName}}
+          <select ng-model='frequencyCreated[frequency.templateName]' ng-options='item for item in frequencyRanges[frequency.templateName]'></select>
+
+        </uib-tab>
+      </uib-tabset>
+    </div>
 
     <script src="node_modules/angular/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="cron.module.js"></script>
     <script src="utils/utils.factory.js"></script>
     <script src="services/cron.service.js"></script>

@@ -14,47 +14,47 @@
     // modeled after: https://docs.angularjs.org/api/ng/directive/ngOptions
     var frequencyOptions = [
       {
-        id : 1,
+        idx : 0,
         label : 'Second',
         templateName: 'seconds',
-        isOption: true
+        disabled: false
       },
       {
-        id : 2,
+        idx : 1,
         label : 'Minute',
         templateName: 'minutes',
-        isOption: true
+        disabled: false
       },
       {
-        id : 3,
+        idx : 2,
         label : 'Hour',
         templateName: 'hours',
-        isOption: true
+        disabled: false
       },
       {
-        id : 4,
+        idx : 3,
         label : 'Day of Month',
         templateName: 'daysOfMonth',
-        isOption: true
+        disabled: false
       },
       {
-        id : 5,
+        idx : 4,
         label : 'Month',
         templateName: 'months',
-        isOption: true
+        disabled: false
       },
       {
-        id : 6,
+        idx : 5,
         label : 'Day of Week',
         templateName: 'daysOfWeek',
-        isOption: true
+        disabled: false
       }
     ];
 
     this.frequencyOptions = frequencyOptions;
     
     this.minFrequencyOption = frequencyOptions.reduce(function(currObj, min) {
-      return Math.min(currObj.id, min);
+      return Math.min(currObj.idx, min);
     }, 6);
 
     this.frequencyRanges = {

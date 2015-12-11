@@ -4,6 +4,7 @@
   "description": "UI Directive for Creating Node-Cron Jobs",
   "main": "index.js",
   "scripts": {
+    "start": "browser-sync start --server --port 3001 --files=\"./*\"",
     "test": "npm test"
   },
   "author": "Sara Gudeman",
@@ -13,6 +14,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.4.8"
+    "angular": "^1.4.8",
+    "angular-ui-bootstrap": "^0.14.3"
   }
 }
