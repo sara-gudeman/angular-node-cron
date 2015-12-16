@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('cron.ui.selectvalues')
-    .constant('selectValueConfig', {
+    .constant('selectValuesConfig', {
       hourStep: 1,
       minuteStep: 1,
       secondStep: 1
