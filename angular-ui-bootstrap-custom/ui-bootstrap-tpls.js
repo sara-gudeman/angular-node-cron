@@ -876,7 +876,6 @@ angular.module("template/tabs/tabset.html", []).run(["$templateCache", function(
 
 angular.module("template/timepicker/timepicker.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("template/timepicker/timepicker.html",
-    "<ng-include=\"template/timepicker/seconds-select.html\"></ng-include>\n" +
     "<table>\n" +
     "  <tbody>\n" +
     "    <tr class=\"text-center\" ng-show=\"::showSpinners\">\n" +
