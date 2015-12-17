@@ -1,7 +1,6 @@
 (function() {
   'use strict';
 
-  angular
-    .module('cron.ui.selectvalues', []);
+  angular.module('cron.ui.selectvalues', ['ngAnimate', 'ui.bootstrap']);
 
 })();
