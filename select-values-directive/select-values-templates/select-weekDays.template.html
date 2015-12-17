@@ -1,0 +1,34 @@
+<hr />
+<label>Monday: 
+  <input type="checkbox" ng-model="monday">
+</label>
+<label>Tuesday: 
+  <input type="checkbox" ng-model="tuesday">
+</label>
+<label>Wednesday: 
+  <input type="checkbox" ng-model="wednesday">
+</label>
+<label>Thursday: 
+  <input type="checkbox" ng-model="thursday">
+</label>
+<label>Friday: 
+  <input type="checkbox" ng-model="friday">
+</label>
+<label>Saturday: 
+  <input type="checkbox" ng-model="saturday">
+</label>
+<label>Sunday: 
+  <input type="checkbox" ng-model="sunday">
+</label>
+<br />
+<td class="uib-time hours" ng-class="{'has-error': invalidHours}">
+  <input style="width:50px;" type="text" placeholder="HH" ng-model="hours" ng-change="updateHours()" class="text-center" ng-readonly="::readonlyInput" maxlength="2" tabindex="{{::tabindex}}" ng-disabled="disabled" ng-blur="blur()">
+</td>
+<td class="uib-separator">:</td>
+<td class="uib-time minutes" ng-class="{'has-error': invalidMinutes}">
+  <input style="width:50px;" type="text" placeholder="MM" ng-model="minutes" ng-change="updateMinutes()" class="text-center" ng-readonly="::readonlyInput" maxlength="2" tabindex="{{::tabindex}}" ng-disabled="disabled" ng-blur="blur()">
+</td>
+<td ng-show="showSeconds" class="uib-separator">:</td>
+<td class="uib-time seconds" ng-class="{'has-error': invalidSeconds}" ng-show="showSeconds">
+  <input style="width:50px;" type="text" placeholder="SS" ng-model="seconds" ng-change="updateSeconds()" class="text-center" ng-readonly="readonlyInput" maxlength="2" tabindex="{{::tabindex}}" ng-disabled="disabled" ng-blur="blur()">
+</td>

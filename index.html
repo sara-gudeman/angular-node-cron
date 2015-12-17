@@ -6,7 +6,8 @@
     <!-- <link rel="stylesheet" type="text/css" href="styles/styles.css"> -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
   </head>
-  <body ng-app="angular-node-cron">
+  <body ng-app="cron.ui.selectvalues">
+  <!-- <body ng-app="angular-node-cron"> -->
     
     <!-- notes: 
     can have CALLBACK FUNCTION stored in SELECT action (as in when a tab is selected); useful for if an action needs to take place after a click
@@ -16,7 +17,7 @@
     disabled can be set to true
      -->
 
-    <div ng-controller="CronController">
+<!--     <div ng-controller="CronController">
       <uib-tabset>
         <uib-tab ng-repeat="frequency in frequencyOptions" heading="{{frequency.label}}" select="frequencyCreated.base = frequency.idx" active="frequency.active" disable="frequency.disabled">
           Every {{frequency.templateName}}
@@ -25,6 +26,8 @@
         </uib-tab>
       </uib-tabset>
     </div>
+ -->
+    <cron-select></cron-select>
 
     <script src="node_modules/angular/angular.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
@@ -33,9 +36,14 @@
     <script src="tabs-directive/ui-bootstrap-tabs.js"></script>
     <script src="cron-directive/cron.module.js"></script>
     <script src="utils/utils.factory.js"></script>
-    <script src="cron-directive/cron.service.js"></script>
-    <script src="cron-directive/cron-config.service.js"></script>
-    <script src="cron-directive/cron.controller.js"></script>
-    <script src="cron-directive/cron-interface.directive.js"></script>
+    <script src="cron-directive-old/cron.service.js"></script>
+    <script src="cron-directive-old/cron-config.service.js"></script>
+    <script src="cron-directive-old/cron.controller.js"></script>
+    <script src="cron-directive-old/cron-interface.directive.js"></script>
+
+    <script src="select-values-directive/select-values.module.js"></script>
+    <script src="select-values-directive/select-values.constants.js"></script>
+    <script src="select-values-directive/select-values.directive.js"></script>
+    <script src="select-values-directive/select-values.controller.js"></script>
   </body>
 </html>
