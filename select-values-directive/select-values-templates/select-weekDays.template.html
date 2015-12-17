@@ -1,26 +1,26 @@
-<hr />
-<label>Monday: 
-  <input type="checkbox" ng-model="monday">
-</label>
-<label>Tuesday: 
-  <input type="checkbox" ng-model="tuesday">
-</label>
-<label>Wednesday: 
-  <input type="checkbox" ng-model="wednesday">
-</label>
-<label>Thursday: 
-  <input type="checkbox" ng-model="thursday">
-</label>
-<label>Friday: 
-  <input type="checkbox" ng-model="friday">
-</label>
-<label>Saturday: 
-  <input type="checkbox" ng-model="saturday">
-</label>
-<label>Sunday: 
-  <input type="checkbox" ng-model="sunday">
-</label>
-<br />
+<div>
+  <label>Monday: 
+    <input type="checkbox" ng-model="monday">
+  </label>
+  <label>Tuesday: 
+    <input type="checkbox" ng-model="tuesday">
+  </label>
+  <label>Wednesday: 
+    <input type="checkbox" ng-model="wednesday">
+  </label>
+  <label>Thursday: 
+    <input type="checkbox" ng-model="thursday">
+  </label>
+  <label>Friday: 
+    <input type="checkbox" ng-model="friday">
+  </label>
+  <label>Saturday: 
+    <input type="checkbox" ng-model="saturday">
+  </label>
+  <label>Sunday: 
+    <input type="checkbox" ng-model="sunday">
+  </label>
+</div>
 <td class="uib-time hours" ng-class="{'has-error': invalidHours}">
   <input style="width:50px;" type="text" placeholder="HH" ng-model="hours" ng-change="updateHours()" class="text-center" ng-readonly="::readonlyInput" maxlength="2" tabindex="{{::tabindex}}" ng-disabled="disabled" ng-blur="blur()">
 </td>

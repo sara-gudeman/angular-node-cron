@@ -1,6 +1,11 @@
-<div>
-  <ng-include src="'/select-values-directive/select-values-templates/select-weekDays.template.html'"></ng-include>
-  <ng-include src="'/select-values-directive/select-values-templates/select-hours.template.html'"></ng-include>
-  <ng-include src="'/select-values-directive/select-values-templates/select-minutes.template.html'"></ng-include>
-  <ng-include src="'/select-values-directive/select-values-templates/select-seconds.template.html'"></ng-include>
-</div>
+<div ng-controller="SelectValuesController">
+  <uib-tabset>
+    <uib-tab ng-repeat="item in items"
+      heading="{{item.title}}"
+      disabled="item.disabled"
+      active="item.active">
+      <ng-include src="getTemplate(item.title)"></ng-include>
+      {{item.content}}
+    </uib-tab>
+  </uib-tabset>
+ </div>
