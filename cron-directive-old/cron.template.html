@@ -1,5 +1,5 @@
 <div>
-  <ng-include src="'templates/tabs.template.html'"></ng-include><br />
+  <ng-include src="'tabs.template.html'"></ng-include><br />
   <div ng-repeat='frequency in frequencyOptions' ng-show='displayOptions(frequency)'>
     <select ng-model='frequencyCreated[frequency.templateName]' ng-options='item for item in frequencyRanges[frequency.templateName]'></select>
     {{frequency.templateName}}
